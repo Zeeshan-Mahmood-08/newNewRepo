@@ -1,0 +1,17 @@
+name: testing-pr
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'blogs/*.md'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+      - name: Successful test
+        run: echo test passed
