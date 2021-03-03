@@ -14,6 +14,6 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Installing package
-        run: npm install markdownlint-cli2 --global
+        run: sudo npm install markdownlint-cli2 --global
       - name: Running Make
         run: echo running make file
