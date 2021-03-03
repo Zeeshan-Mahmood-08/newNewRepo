@@ -10,8 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
-          fetch-depth: 1
-      - name: Successful test
-        run: echo test passed
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Installing package
+        run: npm install markdownlint-cli2 --global
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Running Make
+        run: echo running make file
