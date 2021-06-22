@@ -17,7 +17,8 @@ pipeline {
         stage("Chkk") {
             steps {
                sh '''#!/bin/bash
-               if [[ {helm_version} = "v3" ]]; then
+               set -x
+               if [[ ${helm_version} = "v3" ]]; then
                    echo "Using helm v3";
                    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3;
                    chmod 700 get_helm.sh;
@@ -30,7 +31,7 @@ pipeline {
                curl -Lo chkk https://downloads.chkk.dev/v0.0.1/chkk-linux-amd64;
                export CHKK_ACCESS_TOKEN=$CHKK_ACCESS_TOKEN;
                chmod +x chkk;
-               helm template {helm_chart} {chart_parameters} | ./chkk -f - -r ${enable_checks} -s ${skip_checks} --show-diff=${show_diff} --continue-on-error=${continue_on_error} --check-type=${check_type}
+               helm template ${helm_chart} ${chart_parameters} | ./chkk -f - -r ${enable_checks} -s ${skip_checks} --show-diff=${show_diff} --continue-on-error=${continue_on_error} --check-type=${check_type}
                '''
             }
         }
