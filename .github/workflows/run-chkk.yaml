@@ -1,4 +1,4 @@
-name: Example workflow for Chkk Kubernetes Action
+name: Chkk Directory
 on: push
 jobs:
   kubernetes-manifests:
@@ -7,9 +7,9 @@ jobs:
       - name: Run Chkk to catch reliability risks in your Kubernetes manifests
         uses: actions/checkout@v2
       - name: Chkk Action
-        uses: Zee-M/actions/k8s/manifest@add-helm-support
+        uses: Zee-M/actions/k8s/directory@add-helm-support
         env:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
-          kubernetes-manifest: k8s-manifest.yaml
+          kubernetes-manifest-directory: templates
           args: --continue-on-error=true
