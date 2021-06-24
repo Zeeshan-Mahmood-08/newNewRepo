@@ -7,7 +7,7 @@ jobs:
       - name: Run Chkk to catch reliability risks in your Kubernetes manifests
         uses: actions/checkout@v2
       - name: Chkk Action
-        uses: Zee-M/actions/k8s/helm-chart@add-helm-support
+        uses: Zee-M/actions/helm-chart@add-helm-support
         env:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
