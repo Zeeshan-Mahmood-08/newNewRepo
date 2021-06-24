@@ -13,5 +13,4 @@ jobs:
         with:
           helm-chart-path: .
           helm-version: v3
-          helm-parameters: --set twitterSecretName=ZEHAHAHAHAHAHAHAHHAHHHA
           args: --continue-on-error=true
