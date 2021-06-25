@@ -11,6 +11,6 @@ jobs:
         env:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
-          type: manifest
+          type: directory
           kubernetes-manifest: k8s-manifest.yaml
           args: --continue-on-error=false
