@@ -13,4 +13,4 @@ jobs:
         with:
           type: manifest
           kubernetes-manifest: k8s-manifest.yaml
-          args: --continue-on-error=true
+          args: --continue-on-error=false
