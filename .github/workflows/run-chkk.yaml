@@ -12,4 +12,5 @@ jobs:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
           type: manifest
+          kubernetes-manifest: k8s-manifest.yaml
           args: --continue-on-error=true
