@@ -12,5 +12,5 @@ jobs:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
           type: directory
-          kubernetes-directory: ./
+          kubernetes-directory: ./k8s-manifests
           args: --continue-on-error=false
