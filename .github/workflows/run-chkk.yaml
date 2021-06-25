@@ -11,6 +11,6 @@ jobs:
         env:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
-          type: directory
+          type: helm
           kubernetes-directory: ./k8s-manifests
           args: --continue-on-error=true
