@@ -12,5 +12,5 @@ jobs:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
           type: helm
-          helm-chart: ../
+          helm-chart: .
           args: --continue-on-error=true
