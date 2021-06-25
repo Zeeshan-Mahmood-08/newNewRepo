@@ -13,4 +13,4 @@ jobs:
         with:
           type: directory
           kubernetes-directory: ./k8s-manifests
-          args: --continue-on-error=false
+          args: --continue-on-error=true
