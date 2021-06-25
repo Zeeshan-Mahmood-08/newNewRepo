@@ -13,4 +13,5 @@ jobs:
         with:
           type: helm
           helm-chart: ./
-          args: --continue-on-error=false
+          helm-version: v2
+          args: --continue-on-error=true
