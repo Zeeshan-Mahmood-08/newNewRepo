@@ -15,3 +15,4 @@ jobs:
           run-checks: CHKK-K8S-28,CHKK-K8S-74
           check-type: all
           helm-chart: '.'
+          args: --show-diff=true
