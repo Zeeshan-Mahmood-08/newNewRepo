@@ -10,4 +10,3 @@ jobs:
         uses: Zee-M/actions/k8s@add-helm-support
         env:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
-        with:
