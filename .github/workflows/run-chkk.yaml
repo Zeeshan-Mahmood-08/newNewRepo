@@ -13,5 +13,5 @@ jobs:
         with:
           type: helm
           helm-chart: ./
-          helm-parameters: '--set twitterSecretName=ZEASDAASDSADADASDASDASDASDADSDADASDAS'
-          args: --continue-on-error=true
+          helm-parameters: '--set twitterSecretName=NIKE'
+          args: --continue-on-error=true --show-diff=true
