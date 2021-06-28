@@ -12,5 +12,5 @@ jobs:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
           scan-type: 'helm'
-          skip-checks: CHKK-K8S-28,CHKK-K8S-74
+          run-checks: CHKK-K8S-28,CHKK-K8S-74
           helm-chart: '.'
