@@ -11,4 +11,5 @@ jobs:
         env:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
+          scan-type: 'directory'
           kubernetes-directory: 'k8s-manifests'
