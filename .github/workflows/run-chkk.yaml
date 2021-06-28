@@ -12,4 +12,5 @@ jobs:
           CHKK_ACCESS_TOKEN: ${{ secrets.CHKK_ACCESS_TOKEN }}
         with:
           scan-type: 'helm'
+          helm-version: 'v2'
           helm-chart: '.'
