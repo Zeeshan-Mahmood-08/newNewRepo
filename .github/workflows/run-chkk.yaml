@@ -13,5 +13,5 @@ jobs:
         with:
           scan-type: 'helm'
           run-checks: CHKK-K8S-28,CHKK-K8S-74
-          check-type: security
+          check-type: all
           helm-chart: '.'
