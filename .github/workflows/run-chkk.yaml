@@ -2,8 +2,7 @@ name: Chkk Directory
 on: push
 jobs:
   kubernetes-manifests:
-    runs-on: ubuntu-latest
-    steps:
+    runs-on: ubuntu-18.04
       - name: Run Chkk to catch reliability risks in your Kubernetes manifests
         uses: actions/checkout@v2
       - name: Chkk Action
