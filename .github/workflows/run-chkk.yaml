@@ -3,6 +3,7 @@ on: push
 jobs:
   kubernetes-manifests:
     runs-on: ubuntu-18.04
+    steps:
       - name: Run Chkk to catch reliability risks in your Kubernetes manifests
         uses: actions/checkout@v2
       - name: Chkk Action
